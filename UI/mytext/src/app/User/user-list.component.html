@@ -1,0 +1,66 @@
+<!-- <p>user-list works!</p> -->
+<div class="Card">
+<div class="row">
+    <div class="col-xs-12 col-12 col-md-2 form-group">
+      <input type="text"
+             placeholder="Search"
+             class="form-control" #mySearchInput>
+    </div>
+    <div class="col-xs-12 col-12 col-md-2 form-group">
+      <input type="date"
+             placeholder="StartDatePicker"
+             class="form-control"
+             #myStartDateInput
+             >
+
+    </div>  
+    <div class="col-xs-12 col-12 col-md-2 form-group">
+      <input type="date"
+             placeholder="EndDatePicker"
+             class="form-control"
+             #myEndDateInput
+             >
+
+             
+             
+    </div>  
+    
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-12 col-md-8 form-group">
+  <table class="table">
+    <thead>
+    <tr>
+      <th *ngFor="let col of columnsHeader">
+        {{col}}
+      </th>
+      </tr>
+    </thead>
+  <tbody>
+    
+    <tr *ngFor="let col of Users">
+      <td>
+      {{col.id}}
+      </td>
+      <td>
+        {{col.name}}
+      </td>
+      <td>
+        {{col.jobTitle}}
+      </td>
+      <td>
+        {{col.age}}
+      </td>
+      <td>
+        {{col.empStartDate| date}}
+      </td>
+      <td>
+        {{col.empEndDate| date}}
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+</div>
