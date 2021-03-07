@@ -1,0 +1,11 @@
+D:\testApp\EXLtest\DbModel\bin\Debug\netcoreapp3.1\DbModel.deps.json
+D:\testApp\EXLtest\DbModel\bin\Debug\netcoreapp3.1\DbModel.dll
+D:\testApp\EXLtest\DbModel\obj\Debug\netcoreapp3.1\DbModel.AssemblyInfoInputs.cache
+D:\testApp\EXLtest\DbModel\obj\Debug\netcoreapp3.1\DbModel.AssemblyInfo.cs
+D:\testApp\EXLtest\DbModel\bin\Debug\netcoreapp3.1\DbModel.pdb
+D:\testApp\EXLtest\DbModel\obj\Debug\netcoreapp3.1\DbModel.dll
+D:\testApp\EXLtest\DbModel\obj\Debug\netcoreapp3.1\DbModel.pdb
+D:\testApp\EXLtest\DbModel\bin\Debug\netcoreapp3.1\DbModel.runtimeconfig.json
+D:\testApp\EXLtest\DbModel\bin\Debug\netcoreapp3.1\DbModel.runtimeconfig.dev.json
+D:\testApp\EXLtest\DbModel\obj\Debug\netcoreapp3.1\DbModel.genruntimeconfig.cache
+D:\testApp\EXLtest\DbModel\obj\Debug\netcoreapp3.1\DbModel.csproj.CoreCompileInputs.cache
