@@ -1,0 +1,489 @@
+
+
+.formControl {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.form-left {
+  width: 20%;
+  min-height: 0px;
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  padding: 10px;
+  background-color: #fff;
+  color: #424242;
+  font-size: 10px;
+  border: 1px solid #f1fcff;
+}
+
+.form-right {
+  width: 80%;
+  font-size: 10px;
+  min-height: 0px;
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  background-color: #fff;
+  color: #424242;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  border: 1px solid #f1fcff;
+}
+
+
+
+
+
+<div *ngIf="isReady" class="">
+  <content>
+    <div class="panelbar-wrapper">
+
+      <kendo-panelbar>
+        <kendo-panelbar-item title="Server Summary">
+          <ng-template kendoPanelBarItemTitle>
+            <div class="wrapper-header">
+              <div class="wrapper-leftContent">
+                <strong>Edit Server Summary</strong>
+              </div>
+              <div class="wrapper-rightContent">
+              </div>
+            </div>
+          </ng-template>
+
+          <ng-template kendoPanelBarContent>
+            <form>
+              <div class="formControl">
+                <div class="form-left">
+                  System Tag
+                </div>
+                <div class="form-right">
+                  <kendo-textbox-container floatingLabel="Filter text" style="width: 70%; padding-left: 10px; padding-right: 10px">
+                    <input kendoTextBox placeholder="" name="filterTextTag" [disabled]="true" />
+                  </kendo-textbox-container>
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  System Name
+                </div>
+                <div class="form-right">
+                  <kendo-textbox-container floatingLabel="Filter text" style="width: 70%; padding-left: 10px; padding-right: 10px">
+                    <input kendoTextBox placeholder="" name="filterTextTag" [disabled]="true" />
+                  </kendo-textbox-container>
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                  <label class="k-label">
+                    Show By Default
+                  </label>
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                  <label class="k-label">
+                    Show In System Update
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="formControl">
+                <div class="form-left">
+                  System Status
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+                    <kendo-dropdownlist #ServerSummaryFilteroptions
+                                        [defaultItem]="defaultItem" valuePrimitive="true"
+                                        name="selectFilterOptions"
+                                        formControlName="selectFilterOptions">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  System Category
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+                    <kendo-dropdownlist #ServerSummaryFilteroptions
+                                        [defaultItem]="defaultItem" valuePrimitive="true"
+                                        name="selectFilterOptions"
+                                        formControlName="selectFilterOptions">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  System Zone
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+                    <kendo-dropdownlist #ServerSummaryFilteroptions
+                                        [defaultItem]="defaultItem" valuePrimitive="true"
+                                        name="selectFilterOptions"
+                                        formControlName="selectFilterOptions">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="formControl">
+                <div class="form-left">
+                  System Domain
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+                    <kendo-dropdownlist #ServerSummaryFilteroptions
+                                        [defaultItem]="defaultItem" valuePrimitive="true"
+                                        name="selectFilterOptions"
+                                        formControlName="selectFilterOptions">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="formControl">
+                <div class="form-left">
+                  Patch Group
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+                    <kendo-dropdownlist #ServerSummaryFilteroptions
+                                        [defaultItem]="defaultItem" valuePrimitive="true"
+                                        name="selectFilterOptions"
+                                        formControlName="selectFilterOptions">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  Patch By
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+                    <kendo-dropdownlist #ServerSummaryFilteroptions
+                                        [defaultItem]="defaultItem" valuePrimitive="true"
+                                        name="selectFilterOptions"
+                                        formControlName="selectFilterOptions">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="formControl">
+                <div class="form-left">
+                  Mirror Make/Break Required
+                </div>
+                <div class="form-right">
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                  <label class="k-label">
+                    None
+                  </label>
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                  <label class="k-label">
+                    Weekly
+                  </label>
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                  <label class="k-label">
+                    Monthly
+                  </label>
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  Backup Audit Required
+                </div>
+                <div class="form-right">
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                </div>
+              </div>
+
+
+              <div class="formControl">
+                <div class="form-left">
+                  Backup System State
+                </div>
+                <div class="form-right">
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  Anti Virus required
+                </div>
+                <div class="form-right">
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  Defrag Required
+                </div>
+                <div class="form-right">
+                  <input type="checkbox" kendoCheckBox class="checkbox-filter" />
+                </div>
+
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  Rack Number
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+                    <kendo-dropdownlist #ServerSummaryFilteroptions
+                                        [defaultItem]="defaultItem" valuePrimitive="true"
+                                        name="selectFilterOptions"
+                                        formControlName="selectFilterOptions">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  KVM
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+                    <kendo-dropdownlist #ServerSummaryFilteroptions
+                                        [defaultItem]="defaultItem" valuePrimitive="true"
+                                        name="selectFilterOptions"
+                                        formControlName="selectFilterOptions">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
+
+              <div class="formControl">
+                <div class="form-left">
+                  Clone System Volume Info (Click Icon)
+                </div>
+                <div class="form-right">
+                  <div style="width:200px; padding-left: 10px">
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="formControl">
+                <div class="form-left">
+                  Description
+                </div>
+                <div class="form-right">
+                  <kendo-textbox-container floatingLabel="Filter text" style="width: 70%; padding-left: 10px; padding-right: 10px">
+                    <textarea placeholder="" name="filterTextTagtextArea" ></textarea>
+                  </kendo-textbox-container>
+                </div>
+              </div>
+            </form>
+          </ng-template>
+        </kendo-panelbar-item>
+      </kendo-panelbar>
+    </div>
+
+  </content>
+</div>
+
+<!--<div *ngIf="isReady">
+<div class="col-xs-12">
+  <form class="k-form"
+        (ngSubmit)="onSubmit(systemMasterForm)">-->
+<!--[formGroup]="systemMasterForm"-->
+<!--<div class="card ">
+<div class="card-header text-white bg-info mb-3">
+  <label><strong>Edit System Detail Information</strong></label>
+  <span class="float-right k-form-buttons">
+    <button kendoButton>Save</button>
+    <button kendoButton>Cancel</button>
+  </span>
+</div>
+<div class="card-body">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-3"><label>Service Tag</label></div>
+        <div class="col-lg-5">
+          <input kendoTextBox required />-->
+<!--formControlName="ServiceTag"-->
+<!--</div>
+  </div>
+</div>
+<div class="col-lg-6">
+  <div class="row">
+    <div class="col-lg-3"><label>Service Tag11</label></div>
+    <div class="col-lg-5">
+      <input kendoTextBox required />-->
+<!--formControlName="ServiceTag"-->
+<!--</div>
+    </div>
+  </div>
+
+</div>-->
+<!--<div class="row">
+  <div class="col-lg-3"> <label> Machine Status</label></div>
+  <div class="col-lg-5">
+    <kendo-dropdownlist [data]="statusList"
+                        [textField]="'textField'"
+                        [valueField]="'valueField'"
+                        name="selectStatusName"
+                        formControlName="StatusId"></kendo-dropdownlist>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3"><label>Make and Model</label></div>
+  <div class="col-lg-5">
+    <kendo-combobox [data]="modelsList"
+                    [textField]="'textField'"
+                    [valueField]="'valueField'"
+                    name="selectModels"
+                    formControlName="SystemModelId"></kendo-combobox>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3"> <label> CPU Type</label></div>
+  <div class="col-lg-5">
+    <kendo-dropdownlist [data]="cpuTypeList"
+                        [textField]="'textField'"
+                        [valueField]="'valueField'"
+                        name="selectCPUType"
+                        formControlName="Cputype"></kendo-dropdownlist>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-3"><label>Number Of CPU</label></div>
+  <div class="col-lg-5">
+    <kendo-numerictextbox [format]="'n0'"
+                          [autoCorrect]=true [min]="0" [max]="256" required formControlName="NoOfCpus">
+    </kendo-numerictextbox>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3"><label>System Memory (MB)</label></div>
+  <div class="col-lg-5">
+    <kendo-numerictextbox [format]="'n0'" [min]="0" required formControlName="SystemMemoryMb">
+    </kendo-numerictextbox>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3"><label>Rack Number</label></div>
+  <div class="col-lg-5">
+    <kendo-combobox [data]="rackNumberList"
+                    [textField]="'textField'"
+                    [valueField]="'valueField'"
+                    name="selectRackNumber"
+                    formControlName="RackNumber"></kendo-combobox>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3"><label>KVM</label></div>
+  <div class="col-lg-5">
+    <kendo-dropdownlist [data]="kvmList"
+                        [textField]="'textField'"
+                        [valueField]="'valueField'"
+                        name="Kvm"
+                        formControlName="Kvm"></kendo-dropdownlist>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3"><label>Socket</label></div>
+  <div class="col-lg-5">
+    <kendo-numerictextbox [format]="'n0'" [min]="0" [max]="64"
+                          [autoCorrect]=true required formControlName="Socket">
+    </kendo-numerictextbox>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3"><label>Cores</label></div>
+  <div class="col-lg-5">
+    <kendo-numerictextbox [format]="'n0'" [autoCorrect]=true [min]="0" [max]="64" required formControlName="Cores">
+    </kendo-numerictextbox>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3"><label>Hyperthread</label></div>
+  <div class="col-lg-5">
+    <input type="checkbox" kendoCheckBox formControlName="Hyperthread" />
+  </div>
+</div>-->
+<!--</div>
+</div>-->
+<!--<div class="card">
+  <div class="card-header  text-white bg-info mb-3"><label><strong>Other Information</strong></label> </div>
+  <div class="card-body">
+    <div class="row row-bordered">
+      <div class="col-lg-3"><label>Division Admin</label></div>
+      <div class="col-lg-6">
+        <kendo-combobox [data]="divisionsListAdmin"
+                        [textField]="'textField'"
+                        [valueField]="'valueField'"
+                        name="selectAdminDivision"
+                        formControlName="AdminSubDivisionId"></kendo-combobox>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3"><label>Division Owner</label></div>
+      <div class="col-lg-6">
+        <kendo-combobox [data]="divisionsListOwner"
+                        [textField]="'textField'"
+                        [valueField]="'valueField'"
+                        name="selectOwnerDivision"
+                        formControlName="OwnerSubDivisionId"></kendo-combobox>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3"> <label>Location</label></div>
+      <div class="col-lg-6">
+        <kendo-dropdownlist [data]="locations"
+                            [textField]="'textField'"
+                            [valueField]="'valueField'"
+                            name="selectLocation"
+                            formControlName="SystemLocation"></kendo-dropdownlist>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3"><label>Remarks</label></div>
+      <div class="col-lg-6">
+        <kendo-textbox-container>
+          <textarea kendoTextArea formControlName="Remarks" value="{{_systemMasterList.remarks}}"></textarea>
+        </kendo-textbox-container>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header text-white bg-info mb-3"><label><strong>Audit Information</strong></label> </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col"><label>Created By</label></div>
+      <div class="col">{{_systemMasterList.createdBy}}</div>
+      <div class="col"><label>Created Date</label></div>
+      <div class="col">{{_systemMasterList.createdDate}}</div>
+    </div>
+    <div class="row">
+      <div class="col"> <label>Updated By</label></div>
+      <div class="col">{{_systemMasterList.updatedBy}}</div>
+      <div class="col"><label>Update Date</label></div>
+      <div class="col">{{_systemMasterList.updatedDate}}</div>
+    </div>
+  </div>
+</div>-->
+<!--</form>
+  </div>
+</div>-->
